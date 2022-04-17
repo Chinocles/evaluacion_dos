@@ -1,0 +1,36 @@
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Agenda Telefónica</h1>
+  <p>Su agenda tiene {{numelements}} contacto(s)</p> 
+  <a href="/create" class="btn btn-warning">Crear contacto</a>
+</div>
+<br>
+    <table class="table table-hover">
+      <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha nac.</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Correo electrónico</th>
+      <th scope="col">N° de teléfono</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  {{#each contacts }}
+  <form>
+      <tbody>
+      <tr>
+        <td><a href="/edit/{{id}}" class="btn btn-success">Editar</a></td>
+        <td>{{first_name}}</td>
+        <td>{{surname}}</td>
+        <td>{{date_birth}}</td>
+        <td>{{position_}}</td>
+        <td>{{email}}</td>
+        <td>{{phone}}</td>
+        <td><a href="/delete/{{id}}" class="btn btn-danger" >Eliminar</a></td>
+      </tr>
+      </tbody>
+    </form>
+  {{/each}}
+   </table>

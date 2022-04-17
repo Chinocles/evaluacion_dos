@@ -1,0 +1,49 @@
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Agenda Telefónica</h1>
+  <p>Crear Contacto</p> 
+</div>
+<br>
+<form action="/create" method="POST">
+<div class="row">
+  <div class="col-4">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="fname" name="fname" size= "40" maxlenght="50" required >
+      <label for="floatingInputGrid">Nombre</label>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="surname" name="surname" size="40" maxlengt="50" required>
+      <label for="floatingInputGrid">Apellido</label>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-floating">
+      <input type="date" class="form-control" id="datebirth" name="datebirth" min="1922-01-01" max="2022-01-01" required>
+      <label for="floatingInputGrid">Fecha de nacimiento</label>
+    </div>
+  </div>
+   
+  <div class="col-4">
+    <div class="form-floating">
+      <input type="text" class="form-control" id="position" name="position" size="40" maxlenght="50" required>
+      <label for="floatingInputGrid">Cargo / Ocupación</label>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-floating">
+      <input type="email" class="form-control" id="email" name="email" size="40" maxlenght="50" required>
+      <label for="floatingInputGrid">Correo electrónico</label>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="form-floating">
+      <input type="number" class="form-control" id="phonenumber" name="phonenumber" step="1" min="1" max="99999999999" required>
+      <label for="floatingInputGrid">N° de teléfono</label>
+    </div>
+  </div>
+  
+</div>
+    <input type="submit" class="btn btn-primary btn-sm" value="Guardar">
+  </p>
+</form>
