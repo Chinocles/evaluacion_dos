@@ -25,7 +25,7 @@ class ContactsController {
     try {
       await this.contactsDao.create(contact)
 
-      res.redirect('/start')
+      res.redirect('/')
     } catch (error) {
       console.log(error)
       res.status(500).render('500')
@@ -79,7 +79,7 @@ class ContactsController {
     try {
       const contact = { fname, surname, position, email, datebirth, phone, id }
       await this.contactsDao.editUpdate(contact)
-      res.redirect('/start')
+      res.redirect('/')
     } catch (error) {
       console.log(error)
       res.status(500).render('500')

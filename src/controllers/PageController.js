@@ -1,6 +1,6 @@
 class PageController {
   renderHome (req, res) {
-    res.redirect('start')
+    res.render('home')
   }
 
   renderNotFound (req, res) {

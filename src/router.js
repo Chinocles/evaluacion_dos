@@ -12,12 +12,10 @@ const pageController = new PageController()
 const contactsController = new ContactsController(sqlClient)
 
 // Routes
-router.get('/', pageController.renderHome)
+router.get('/', contactsController.renderStartAllContacts)
 
 router.get('/create', contactsController.renderCreate)
 router.post('/create', contactsController.renderInsertContact)
-
-router.get('/start', contactsController.renderStartAllContacts)
 
 router.get('/edit/:id', contactsController.renderEditContact)
 router.post('/edit/:id', contactsController.renderUpdateContact)
