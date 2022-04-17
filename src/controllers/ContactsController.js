@@ -1,4 +1,4 @@
-const ContactsDAO = require('../models/dao/contactsDAO')
+const ContactsDAO = require('../models/dao/ContactsDAO')
 
 class ContactsController {
   constructor (db) {
